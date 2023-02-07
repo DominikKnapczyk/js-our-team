@@ -38,3 +38,17 @@ team.forEach(member => {
   console.log(`Role: ${member.role}`);
   console.log(`Photo: ${member.photo}\n`);
 });
+
+// Milestone 2
+
+const teamContainer = document.getElementById("team-container");
+
+team.forEach(member => {
+  const memberDiv = document.createElement("div");
+  memberDiv.innerHTML = `
+    <p>Name: ${member.name}</p>
+    <p>Role: ${member.role}</p>
+    <p>Photo: ${member.photo}</p>
+  `;
+  teamContainer.appendChild(memberDiv);
+});
